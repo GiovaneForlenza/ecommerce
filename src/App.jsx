@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      {/* Used to handle different pages routing within the website */}
       <Routes>
+        {/* Defines which page will be displayed for each route */}
         <Route path="/" element={<Home />} />
         <Route path="auth" element={<Auth />} />
         <Route path="checkout" element={<Checkout />} />

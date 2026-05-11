@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 
-function ProductCard({product}) {
+function ProductCard({ product }) {
   return (
     <div className="product-card">
       <img
@@ -13,6 +13,7 @@ function ProductCard({product}) {
         <h3 className="product-card-name">{product.name}</h3>
         <p className="product-card-price">${product.price.toFixed(2)}</p>
         <div className="product-card-actions">
+          {/* Links to product details page */}
           <Link className="btn btn-secondary">View Details</Link>
           <button className="btn btn-primary">Add to cart</button>
         </div>
@@ -21,4 +22,4 @@ function ProductCard({product}) {
   );
 }
 
-export default ProductCard
+export default ProductCard;
