@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 useForm;
+import { AuthContext } from "../contexts/AuthContext";
+
 function Auth() {
   const [mode, setMode] = useState("login");
+  const { signUp, user, logout } = useContext(AuthContext);
 
   // Used to handle form state and validation
   const {
@@ -12,14 +15,22 @@ function Auth() {
   } = useForm();
 
   // Function to handle form submission
-  function formSubmitted() {
-    alert("Form submitted");
+  function formSubmitted(data) {
+    signUp(data.email, data.password);
   }
 
   return (
     <div className="page">
       <div className="container">
         <div className="auth-container">
+          {user && (
+            <div className="auth-success">
+              <h2>Welcome, {user.email}!</h2>
+              <button className="btn btn-secondary" onClick={logout}>
+                Logout
+              </button>
+            </div>
+          )}
           <h1 className="page-title">
             {/* Changes the title based on the current mode */}
             {mode === "signup" ? "Sign Up" : "Sign In"}
