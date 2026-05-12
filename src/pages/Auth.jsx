@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 function Auth() {
   const [mode, setMode] = useState("login");
   const [error, setError] = useState(null);
-  const { signUp, login,  logout, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // Used to handle form state and validation
