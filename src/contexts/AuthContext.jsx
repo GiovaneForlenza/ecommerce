@@ -34,7 +34,29 @@ export default function AuthProvider({ children }) {
     return { success: true, message: "User created successfully" };
   }
 
-  function login() {}
+  function login(email, password) {
+    // Retrieves the list of users from localStorage
+    const users = localStorage.getItem("users")
+      ? JSON.parse(localStorage.getItem("users"))
+      : [];
+
+    // Finds the user with the provided email and password
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      return { success: false, message: "Invalid email or password" };
+    }
+
+    // Updates the user state with the logged-in user's email
+    setUser({ email });
+
+    // Stores the current user in localStorage
+    localStorage.setItem("currentUser", JSON.stringify(email));
+
+    return { success: true, message: "Login successful" };
+  }
 
 function logout() {
     // Clears the current user from localStorage and updates the user state to null, effectively logging the user out and allowing the app to reflect the logged-out state
@@ -43,7 +65,7 @@ function logout() {
   }
 
   return (
-    <AuthContext.Provider value={{ signUp, logout, user }}>
+    <AuthContext.Provider value={{ signUp, login, logout, user }}>
       {children}
     </AuthContext.Provider>
   );

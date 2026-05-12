@@ -1,11 +1,14 @@
 import React, { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 useForm;
 import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Auth() {
   const [mode, setMode] = useState("login");
-  const { signUp, user, logout } = useContext(AuthContext);
+  const [error, setError] = useState(null);
+  const { signUp, login,  logout, user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   // Used to handle form state and validation
   const {
@@ -16,7 +19,23 @@ function Auth() {
 
   // Function to handle form submission
   function formSubmitted(data) {
-    signUp(data.email, data.password);
+    setError(null); // Resets any previous error messages
+    let result;
+
+    // Calls the appropriate function (signUp or login) based on the current mode and stores the result, allowing the app to perform the correct authentication action based on user interaction
+    if (mode === "signup") {
+      result = signUp(data.email, data.password);
+    } else {
+      result = login(data.email, data.password);
+    }
+
+    // Checks the result of the signUp or login function and sets an error message if the operation was not successful, allowing the user to see feedback on why their authentication attempt failed
+    if (!result.success) {
+      setError(result.message);
+    } else {
+      // If authentication is successful, navigate to the home page
+      navigate("/");
+    }
   }
 
   return (
@@ -25,10 +44,7 @@ function Auth() {
         <div className="auth-container">
           {user && (
             <div className="auth-success">
-              <h2>Welcome, {user.email}!</h2>
-              <button className="btn btn-secondary" onClick={logout}>
-                Logout
-              </button>
+              <h2>Welcome, {user.email}!</h2>              
             </div>
           )}
           <h1 className="page-title">
@@ -41,6 +57,7 @@ function Auth() {
             // Uses handleSubmit from react-hook-form to manage form submission and validation
             onSubmit={handleSubmit(formSubmitted)}
           >
+            {error && <p className="form-error">{error}</p>}
             <div className="form-group">
               <label htmlFor="email" className="form-label">
                 Email
