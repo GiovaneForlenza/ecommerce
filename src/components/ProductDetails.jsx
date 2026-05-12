@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../data/products";
+import { useCart } from "../contexts/CartContext";
 
 function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
+  const { addToCart, cartItems } = useCart();
 
   // Fetch product details when component mounts or when id changes
   useEffect(() => {
@@ -19,7 +21,8 @@ function ProductDetails() {
 
     // When the product id changes, the effect will run again to fetch the new product details
   }, [id]);
-
+  const productInCart = cartItems.find((item) => item.id === product.id);
+  console.log(productInCart);
   return (
     <div className="page">
       <div className="container">
@@ -37,7 +40,13 @@ function ProductDetails() {
               {/* Product price. Uses ? to only display if product exists */}
               Price: ${product?.price.toFixed(2)}
             </p>
-            <button className="btn btn-primary">Add to Cart</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => addToCart(product.id)}
+            >
+              Add to Cart
+              {productInCart ? ` (${productInCart.quantity})` : ""}
+            </button>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ function ProductCard({ product }) {
             onClick={() => addToCart(product.id)}
           >
             {/* If the product is already in the cart display its quantity after the label */}
-            Add to cart {productInCart ? ` (${productInCart.quantity})` : ""}
+            Add to cart{productInCart ? ` (${productInCart.quantity})` : ""}
           </button>
         </div>
       </div>
