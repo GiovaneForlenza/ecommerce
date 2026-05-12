@@ -21,16 +21,16 @@ function ProductCard({ product }) {
         <p className="product-card-price">${product.price.toFixed(2)}</p>
         <div className="product-card-actions">
           {/* Links to product details page */}
-          <Link className="btn btn-secondary" to={`/products/${product.id}`}>
-            View Details
-          </Link>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary btn-large"
             onClick={() => addToCart(product.id)}
           >
             {/* If the product is already in the cart display its quantity after the label */}
             Add to cart{productInCart ? ` (${productInCart.quantity})` : ""}
           </button>
+          <Link className="btn btn-secondary" to={`/products/${product.id}`}>
+            View Details
+          </Link>
         </div>
       </div>
     </div>
