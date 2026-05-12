@@ -317,6 +317,7 @@ body {
 
 .checkout-item-details {
   flex: 1;
+  text-decoration: none;
 }
 
 .checkout-item-name {

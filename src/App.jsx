@@ -3,10 +3,11 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import ProductDetails from "./components/ProductDetails";
 import AuthProvider from "./contexts/AuthContext";
+import { CartProvider } from "./contexts/CartContext";
 import Auth from "./pages/Auth";
 import Checkout from "./pages/Checkout";
 import Home from "./pages/Home";
-import { CartProvider } from "./contexts/CartContext";
+import OrderSummary from "./pages/OrderSummary";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             {/* Route for product details page. Uses :id to capture the product ID from the URL */}
             <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/order-summary" element={<OrderSummary />} />
           </Routes>
         </div>
       </CartProvider>

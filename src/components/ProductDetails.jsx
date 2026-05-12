@@ -21,8 +21,9 @@ function ProductDetails() {
 
     // When the product id changes, the effect will run again to fetch the new product details
   }, [id]);
-  const productInCart = cartItems.find((item) => item.id === product.id);
-  console.log(productInCart);
+  const productInCart = product
+    ? cartItems.find((item) => item.id === product.id)
+    : 0;
   return (
     <div className="page">
       <div className="container">
@@ -44,8 +45,7 @@ function ProductDetails() {
               className="btn btn-primary"
               onClick={() => addToCart(product.id)}
             >
-              Add to Cart
-              {productInCart ? ` (${productInCart.quantity})` : ""}
+              Add to Cart {productInCart ? ` (${productInCart.quantity})` : ""}
             </button>
           </div>
         </div>
