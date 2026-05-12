@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
-import { set, useForm } from "react-hook-form";
-useForm;
-import { AuthContext } from "../contexts/AuthContext";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 function Auth() {
   const [mode, setMode] = useState("login");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const { signUp, login,  logout, user } = useAuth();
 
   // Used to handle form state and validation
   const {
@@ -41,6 +41,7 @@ function Auth() {
     <div className="page">
       <div className="container">
         <div className="auth-container">
+          {/* Display the user's name if they are logged in */}
           {user && (
             <div className="auth-success">
               <h2>Welcome, {user.email}!</h2>              

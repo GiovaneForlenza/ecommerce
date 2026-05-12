@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from "react";
 
 export const AuthContext = createContext(null);
 
@@ -42,7 +42,7 @@ export default function AuthProvider({ children }) {
 
     // Finds the user with the provided email and password
     const user = users.find(
-      (u) => u.email === email && u.password === password
+      (u) => u.email === email && u.password === password,
     );
 
     if (!user) {
@@ -58,7 +58,7 @@ export default function AuthProvider({ children }) {
     return { success: true, message: "Login successful" };
   }
 
-function logout() {
+  function logout() {
     // Clears the current user from localStorage and updates the user state to null, effectively logging the user out and allowing the app to reflect the logged-out state
     localStorage.removeItem("currentUser");
     setUser(null);
@@ -69,4 +69,9 @@ function logout() {
       {children}
     </AuthContext.Provider>
   );
+}
+
+export function useAuth() {
+  const context = useContext(AuthContext);
+  return context;
 }

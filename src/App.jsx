@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import ProductDetails from "./components/ProductDetails";
+import AuthProvider from "./contexts/AuthContext";
 import Auth from "./pages/Auth";
 import Checkout from "./pages/Checkout";
-import Navbar from "./components/Navbar";
-import AuthProvider from "./contexts/AuthContext";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -17,8 +17,10 @@ function App() {
         <Routes>
           {/* Defines which page will be displayed for each route */}
           <Route path="/" element={<Home />} />
-          <Route path="auth" element={<Auth />} />
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/checkout" element={<Checkout />} />
+          {/* Route for product details page. Uses :id to capture the product ID from the URL */}
+          <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       </div>
     </AuthProvider>
