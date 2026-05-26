@@ -6,6 +6,7 @@ function ProductCard({ product }) {
   const { addToCart, cartItems } = useCart();
   // Check if the product is already in the cart to display the quantity next to the "Add to cart" button
   const productInCart = cartItems.find((item) => item.id === product.id);
+
   return (
     <div className="product-card">
       {/* Link to product details page */}
@@ -18,7 +19,14 @@ function ProductCard({ product }) {
       </Link>
       <div className="product-card-content">
         <h3 className="product-card-name">{product.name}</h3>
-        <p className="product-card-price">${product.price.toFixed(2)}</p>
+        <div className="product-card-price-rating">
+          <p className="product-card-price">${product.price.toFixed(2)}</p>
+          <span className="product-card-rating">
+            {product.rating}
+            <span className="product-star-rating">{product.starRating}</span>(
+            {product.comments})
+          </span>
+        </div>
         <div className="product-card-actions">
           {/* Links to product details page */}
           <button
