@@ -24,7 +24,7 @@ function ProductCard({ product }) {
           <span className="product-card-rating">
             {product.rating}
             <span className="product-star-rating">{product.starRating}</span>(
-            {product.comments})
+            {product.reviews})
           </span>
         </div>
         <div className="product-card-actions">

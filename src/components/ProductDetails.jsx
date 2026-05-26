@@ -2,15 +2,22 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
 import { getProductById } from "../data/products";
-import { getCommentsByProductId } from "../data/comments";
+import {
+  getProductReviewsWithRating,
+  getReviewsByProductId,
+} from "../data/reviews";
 import { getUserById } from "../data/users";
+import ProductReview from "./ProductReview";
+import ProductReviewValueFilter from "./ProductReviewValueFilter";
 
 function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
   const { addToCart, cartItems } = useCart();
-  const [comments, setComments] = useState([]);
+  const [reviews, setReviews] = useState([]);
+
+  const [activeRatingFilter, setActiveRatingFilter] = useState(0);
   // const [commentCount, setCommentCount] = useState(0);
   let commentCount = 0;
   // Fetch product details when component mounts or when id changes
@@ -22,12 +29,13 @@ function ProductDetails() {
       return;
     }
     setProduct(foundProduct);
-    setComments(getCommentsByProductId(id));
+    setReviews(getReviewsByProductId(id));
     // When the product id changes, the effect will run again to fetch the new product details
   }, [id]);
   const productInCart = product
     ? cartItems.find((item) => item.id === product.id)
     : 0;
+
   return (
     <div className="page">
       <div className="container product-container">
@@ -59,37 +67,51 @@ function ProductDetails() {
           </div>
         </div>
         <div className="product-rating-container">
-          <div className="product-rating-header">a</div>
+          <div className="product-rating-filters">
+            <h2>Customers Reviews</h2>
+            <div className="product-card-rating">
+              <span className="product-star-rating">{product?.starRating}</span>
+              {product?.rating} out of 5
+            </div>
+            <div className="product-rating-values">
+              <div
+                className={`product-details-rating-value ${activeRatingFilter === 0 && "active-filter"}`}
+                onClick={() => {
+                  setReviews(getReviewsByProductId(product?.id));
+                  setActiveRatingFilter(0);
+                }}
+              >
+                {`All - ${product?.reviews} reviews`}
+              </div>
+              {Array.from({ length: 5 }, (_, i) => (
+                <ProductReviewValueFilter
+                  productId={product?.id}
+                  rating={5 - i}
+                  setReviews={setReviews}
+                  activeRatingFilter={activeRatingFilter}
+                  setActiveRatingFilter={setActiveRatingFilter}
+                />
+              ))}
+            </div>
+          </div>
           <div className="product-ratings-list">
-            {comments &&
-              comments.map((c) => {
-                const user = getUserById(c.userId);
+            {reviews && reviews.length > 0 ? (
+              reviews.map((review) => {
+                const user = getUserById(review.userId);
                 commentCount++;
                 return (
-                  <div key={c.id} className="product-rating-comment">
-                    <div className="product-rating-comment-header">
-                      <img src={user.photo} alt="User photo" />
-                      <div className="product-rating-comment-header-info">
-                        <h3 className="product-rating-comment-user-name">
-                          {user.name}
-                        </h3>
-                        <span className="product-detail-rating">
-                          {/* {c.rating} */}
-                        </span>
-                        <span className="product-star-rating">
-                          {c.starRating}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="product-rating-comment-content">
-                      {c.comment}
-                    </div>
-                    {commentCount < product?.comments && (
-                      <div className="product-rating-comment-line"></div>
-                    )}
-                  </div>
+                  <ProductReview
+                    review={review}
+                    user={user}
+                    commentCount={commentCount}
+                    key={review.id}
+                    product={product}
+                  />
                 );
-              })}
+              })
+            ) : (
+              <div className="product-ratings-no-reviews">{`There are no ${activeRatingFilter}-star reviews at this moment`}</div>
+            )}
           </div>
         </div>
       </div>

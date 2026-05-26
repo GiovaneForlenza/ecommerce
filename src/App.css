@@ -233,26 +233,66 @@ body {
 
 .product-rating-container {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 64px;
-  
 }
 
-.product-rating-header,
+.product-rating-filters,
 .product-ratings-list {
   /* border: 1px solid #000; */
 }
 
-.product-ratings-list{
+.product-rating-filters {
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+
+.product-rating-filters .product-card-rating{
+  font-size: 28px;
+}
+.product-rating-values{
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  width: fit-content;
+  justify-content: stretch;  
+}
+.active-filter{
+  color: #007bff;
+  font-weight: bold;
+  background-color: #add2fa;
+}
+
+.product-details-rating-value{
+  cursor: pointer;
+  /* padding: 0.5rem 0; */
+  padding: 4px 12px;
+  /* width: fit-content; */
+  border-radius: 6px;
+  }
+
+.product-ratings-list {
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
   /* gap: 3rem; */
   flex-direction: column;
 }
 
-.product-rating-comment{
+.product-ratings-no-reviews{
+  /* border: 1px solid #000; */
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 32px;
+}
+
+.product-rating-comment {
   /* border: 1px solid #000; */
   display: flex;
   align-items: start;
@@ -261,35 +301,30 @@ body {
   flex-direction: column;
 }
 
-
-.product-rating-comment-content{
+.product-rating-comment-content {
   /* border: 1px solid #000; */
 }
-.product-rating-comment-line{
+.product-rating-comment-line {
   border-bottom: 1px solid #eaeaea;
   width: 100%;
   margin: 2rem 0;
 }
 
-.product-rating-comment-line:last-child(){
+/* .product-rating-comment-line:last-child() {
   border: none !important;
-}
+} */
 
-.product-rating-comment-header{
+.product-rating-comment-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
-.product-rating-comment-header img{
+.product-rating-comment-header img {
   border-radius: 100%;
   aspect-ratio: 1;
   width: 80px;
 }
-
-
-
-
 
 .auth-container {
   max-width: 400px;

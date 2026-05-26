@@ -1,5 +1,5 @@
-export const comments = [
-  // Product 1: Wireless Headphones (14 comments, avg rating 4.2)
+export const reviews = [
+  // Product 1: Wireless Headphones (14 reviews, avg rating 4.2)
   {
     id: 1,
     productId: 1,
@@ -7,6 +7,7 @@ export const comments = [
     comment: "Amazing sound quality! The noise cancellation is top notch.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-15",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const comments = [
     comment: "Very comfortable for long sessions, but the price is steep.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-01-20",
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const comments = [
     comment: "Great audio but the carrying case feels cheap.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-03",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const comments = [
     comment: "Battery life is decent but not 30 hours as advertised.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-02-10",
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const comments = [
     comment: "Best headphones I've owned. Worth every penny!",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-02-18",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const comments = [
     comment: "Connectivity issues sometimes. Drops connection with my laptop.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-01",
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ export const comments = [
     comment: "Noise cancellation is good but not Sony-level.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-03-12",
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ export const comments = [
     comment: "The ear cushions started peeling after 6 months.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-20",
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ export const comments = [
     comment: "Solid build quality and great bass response.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-04-02",
   },
   {
     id: 10,
@@ -79,6 +88,7 @@ export const comments = [
     comment: "Too tight on my head, gave me headaches.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-11",
   },
   {
     id: 11,
@@ -87,6 +97,7 @@ export const comments = [
     comment: "Good value for money, but app needs work.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-04-18",
   },
   {
     id: 12,
@@ -95,6 +106,7 @@ export const comments = [
     comment: "Love the multipoint connection feature!",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-01",
   },
   {
     id: 13,
@@ -103,6 +115,7 @@ export const comments = [
     comment: "Microphone quality is poor for calls.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-10",
   },
   {
     id: 14,
@@ -111,9 +124,10 @@ export const comments = [
     comment: "Decent but overhyped. Expected more for $100.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-22",
   },
 
-  // Product 2: Smart Watch (18 comments, avg rating 3.8)
+  // Product 2: Smart Watch (18 reviews, avg rating 3.8)
   {
     id: 15,
     productId: 2,
@@ -121,6 +135,7 @@ export const comments = [
     comment: "Accurate heart rate monitor, battery lasts 5 days.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-10",
   },
   {
     id: 16,
@@ -129,6 +144,7 @@ export const comments = [
     comment: "App is buggy and crashes frequently.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-01-18",
   },
   {
     id: 17,
@@ -137,6 +153,7 @@ export const comments = [
     comment: "Nice design but screen scratches easily.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-01-25",
   },
   {
     id: 18,
@@ -145,6 +162,7 @@ export const comments = [
     comment: "Step counter is inaccurate, off by 500-1000 steps.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-02-05",
   },
   {
     id: 19,
@@ -153,6 +171,7 @@ export const comments = [
     comment: "Great for fitness tracking, sleep tracking is meh.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-14",
   },
   {
     id: 20,
@@ -161,6 +180,7 @@ export const comments = [
     comment: "Water resistance failed after first swim.",
     rating: 1.0,
     starRating: "★☆☆☆☆",
+    reviewedDate: "2024-02-22",
   },
   {
     id: 21,
@@ -169,6 +189,7 @@ export const comments = [
     comment: "Comfortable to wear 24/7, barely notice it.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-03",
   },
   {
     id: 22,
@@ -177,6 +198,7 @@ export const comments = [
     comment: "Notifications are delayed by minutes sometimes.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-11",
   },
   {
     id: 23,
@@ -185,6 +207,7 @@ export const comments = [
     comment: "Good entry-level smartwatch, does the basics well.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-03-19",
   },
   {
     id: 24,
@@ -193,6 +216,7 @@ export const comments = [
     comment: "Barely lasts 2 days with always-on display.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-03-28",
   },
   {
     id: 25,
@@ -201,6 +225,7 @@ export const comments = [
     comment: "Love the customizable watch faces!",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-04-06",
   },
   {
     id: 26,
@@ -209,6 +234,7 @@ export const comments = [
     comment: "GPS is slow to connect, sometimes never does.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-15",
   },
   {
     id: 27,
@@ -217,6 +243,7 @@ export const comments = [
     comment: "Solid build but software feels unfinished.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-04-23",
   },
   {
     id: 28,
@@ -225,6 +252,7 @@ export const comments = [
     comment: "Charging cable is proprietary and too short.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-02",
   },
   {
     id: 29,
@@ -233,6 +261,7 @@ export const comments = [
     comment: "Great value compared to Apple Watch.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-05-11",
   },
   {
     id: 30,
@@ -241,6 +270,7 @@ export const comments = [
     comment: "Customer support was unhelpful with my issue.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-05-18",
   },
   {
     id: 31,
@@ -249,6 +279,7 @@ export const comments = [
     comment: "Works perfectly with my Android phone.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-25",
   },
   {
     id: 32,
@@ -257,9 +288,10 @@ export const comments = [
     comment: "Vibration motor is weak, miss notifications often.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-01",
   },
 
-  // Product 3: Laptop Stand (9 comments, avg rating 4.4)
+  // Product 3: Laptop Stand (9 reviews, avg rating 4.4)
   {
     id: 33,
     productId: 3,
@@ -267,6 +299,7 @@ export const comments = [
     comment: "Sturdy aluminum build, improved my posture significantly.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-12",
   },
   {
     id: 34,
@@ -275,6 +308,7 @@ export const comments = [
     comment: "Fits my 16-inch laptop perfectly, very stable.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-28",
   },
   {
     id: 35,
@@ -283,6 +317,7 @@ export const comments = [
     comment: "A bit wobbly at max height, but fine for normal use.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-15",
   },
   {
     id: 36,
@@ -291,6 +326,7 @@ export const comments = [
     comment: "Rubber grips fell off after 2 months.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-05",
   },
   {
     id: 37,
@@ -299,6 +335,7 @@ export const comments = [
     comment: "Simple and effective, exactly what I needed.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-22",
   },
   {
     id: 38,
@@ -307,6 +344,7 @@ export const comments = [
     comment: "Too heavy to carry around, good for desk use only.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-04-09",
   },
   {
     id: 39,
@@ -315,6 +353,7 @@ export const comments = [
     comment: "Sharp edges, cut my finger while adjusting.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-25",
   },
   {
     id: 40,
@@ -323,6 +362,7 @@ export const comments = [
     comment: "Great value, feels premium for the price.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-14",
   },
   {
     id: 41,
@@ -331,9 +371,10 @@ export const comments = [
     comment: "Doesn't fold flat, takes up space in bag.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-03",
   },
 
-  // Product 4: Mechanical Keyboard (20 comments, avg rating 4.7)
+  // Product 4: Mechanical Keyboard (20 reviews, avg rating 4.7)
   {
     id: 42,
     productId: 4,
@@ -341,6 +382,7 @@ export const comments = [
     comment: "Cherry MX switches feel incredible, best keyboard ever!",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-05",
   },
   {
     id: 43,
@@ -349,6 +391,7 @@ export const comments = [
     comment: "RGB lighting is stunning, software is decent.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-19",
   },
   {
     id: 44,
@@ -357,6 +400,7 @@ export const comments = [
     comment: "Too loud for office, but great for home.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-01",
   },
   {
     id: 45,
@@ -365,6 +409,7 @@ export const comments = [
     comment: "Keycaps started shining after 3 months.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-02-12",
   },
   {
     id: 46,
@@ -373,6 +418,7 @@ export const comments = [
     comment: "Build quality is top notch, heavy and sturdy.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-02-25",
   },
   {
     id: 47,
@@ -381,6 +427,7 @@ export const comments = [
     comment: "USB cable is non-detachable, inconvenient.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-03-08",
   },
   {
     id: 48,
@@ -389,6 +436,7 @@ export const comments = [
     comment: "Perfect for gaming, minimal input lag.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-18",
   },
   {
     id: 49,
@@ -397,6 +445,7 @@ export const comments = [
     comment: "Some keys feel inconsistent, maybe a defect.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-03-29",
   },
   {
     id: 50,
@@ -405,6 +454,7 @@ export const comments = [
     comment: "No USB passthrough, disappointing for 2024.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-04-07",
   },
   {
     id: 51,
@@ -413,6 +463,7 @@ export const comments = [
     comment: "Software crashed and lost my profiles.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-16",
   },
   {
     id: 52,
@@ -421,6 +472,7 @@ export const comments = [
     comment: "Typing feels amazing, I'm faster now.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-04-27",
   },
   {
     id: 53,
@@ -429,6 +481,7 @@ export const comments = [
     comment: "Wrist rest would have been nice inclusion.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-05-05",
   },
   {
     id: 54,
@@ -437,6 +490,7 @@ export const comments = [
     comment: "Space bar rattles, needs lubrication.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-13",
   },
   {
     id: 55,
@@ -445,6 +499,7 @@ export const comments = [
     comment: "Great for programming, love the tactile feedback.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-21",
   },
   {
     id: 56,
@@ -453,6 +508,7 @@ export const comments = [
     comment: "Expensive but worth it for enthusiasts.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-29",
   },
   {
     id: 57,
@@ -461,6 +517,7 @@ export const comments = [
     comment: "Software is bloated and confusing.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-04",
   },
   {
     id: 58,
@@ -469,6 +526,7 @@ export const comments = [
     comment: "Best keyboard I've used in 10 years.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-06-10",
   },
   {
     id: 59,
@@ -477,6 +535,7 @@ export const comments = [
     comment: "LED on 'A' key died after 2 weeks.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-06-15",
   },
   {
     id: 60,
@@ -485,6 +544,7 @@ export const comments = [
     comment: "Solid purchase, would buy again.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-06-20",
   },
   {
     id: 61,
@@ -493,9 +553,10 @@ export const comments = [
     comment: "Takes time to adjust to the height.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-06-25",
   },
 
-  // Product 5: USB-C Hub (12 comments, avg rating 3.5)
+  // Product 5: USB-C Hub (12 reviews, avg rating 3.5)
   {
     id: 62,
     productId: 5,
@@ -503,6 +564,7 @@ export const comments = [
     comment: "Works as advertised, HDMI output is crisp.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-08",
   },
   {
     id: 63,
@@ -511,6 +573,7 @@ export const comments = [
     comment: "Gets very hot during extended use.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-01-22",
   },
   {
     id: 64,
@@ -519,6 +582,7 @@ export const comments = [
     comment: "Ethernet port is slow, only 100mbps.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-02-07",
   },
   {
     id: 65,
@@ -527,6 +591,7 @@ export const comments = [
     comment: "Compact and portable, fits in my sleeve.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-19",
   },
   {
     id: 66,
@@ -535,6 +600,7 @@ export const comments = [
     comment: "USB ports are loose, devices disconnect.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-04",
   },
   {
     id: 67,
@@ -543,6 +609,7 @@ export const comments = [
     comment: "Great value for the price, has all ports I need.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-17",
   },
   {
     id: 68,
@@ -551,6 +618,7 @@ export const comments = [
     comment: "Doesn't work with my iPad Pro like advertised.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-30",
   },
   {
     id: 69,
@@ -559,6 +627,7 @@ export const comments = [
     comment: "Decent hub but build feels cheap.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-04-13",
   },
   {
     id: 70,
@@ -567,6 +636,7 @@ export const comments = [
     comment: "No issues after 6 months of daily use.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-04-26",
   },
   {
     id: 71,
@@ -575,6 +645,7 @@ export const comments = [
     comment: "SD card reader is painfully slow.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-09",
   },
   {
     id: 72,
@@ -583,6 +654,7 @@ export const comments = [
     comment: "Cable is too short, awkward positioning.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-23",
   },
   {
     id: 73,
@@ -591,9 +663,10 @@ export const comments = [
     comment: "Overheats and disconnects during video calls.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-06-06",
   },
 
-  // Product 6: Wireless Mouse (16 comments, avg rating 4.1)
+  // Product 6: Wireless Mouse (16 reviews, avg rating 4.1)
   {
     id: 74,
     productId: 6,
@@ -601,6 +674,7 @@ export const comments = [
     comment: "Ergonomic and comfortable, battery lasts forever.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-07",
   },
   {
     id: 75,
@@ -609,6 +683,7 @@ export const comments = [
     comment: "Too small for large hands, causes cramps.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-01-21",
   },
   {
     id: 76,
@@ -617,6 +692,7 @@ export const comments = [
     comment: "Precise tracking on any surface, impressive.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-02-04",
   },
   {
     id: 77,
@@ -625,6 +701,7 @@ export const comments = [
     comment: "Scroll wheel is noisy and feels cheap.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-02-16",
   },
   {
     id: 78,
@@ -633,6 +710,7 @@ export const comments = [
     comment: "Great for work, not for gaming (some lag).",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-03-02",
   },
   {
     id: 79,
@@ -641,6 +719,7 @@ export const comments = [
     comment: "USB receiver broke inside the mouse.",
     rating: 1.0,
     starRating: "★☆☆☆☆",
+    reviewedDate: "2024-03-14",
   },
   {
     id: 80,
@@ -649,6 +728,7 @@ export const comments = [
     comment: "Silent clicks, perfect for library use.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-26",
   },
   {
     id: 81,
@@ -657,6 +737,7 @@ export const comments = [
     comment: "Software is basic but gets the job done.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-04-08",
   },
   {
     id: 82,
@@ -665,6 +746,7 @@ export const comments = [
     comment: "Middle click stopped working after a month.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-20",
   },
   {
     id: 83,
@@ -673,6 +755,7 @@ export const comments = [
     comment: "Good budget option, nothing special.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-05-03",
   },
   {
     id: 84,
@@ -681,6 +764,7 @@ export const comments = [
     comment: "Bluetooth pairing is finicky with Mac.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-15",
   },
   {
     id: 85,
@@ -689,6 +773,7 @@ export const comments = [
     comment: "Love the side buttons for browsing.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-27",
   },
   {
     id: 86,
@@ -697,6 +782,7 @@ export const comments = [
     comment: "Feels plasticky and cheaply made.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-02",
   },
   {
     id: 87,
@@ -705,6 +791,7 @@ export const comments = [
     comment: "Battery indicator is inaccurate.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-09",
   },
   {
     id: 88,
@@ -713,6 +800,7 @@ export const comments = [
     comment: "Solid mouse for the price, would recommend.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-06-16",
   },
   {
     id: 89,
@@ -721,9 +809,10 @@ export const comments = [
     comment: "DPI settings are limited, not for pros.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-23",
   },
 
-  // Product 7: Monitor Stand (7 comments, avg rating 4.3)
+  // Product 7: Monitor Stand (7 reviews, avg rating 4.3)
   {
     id: 90,
     productId: 7,
@@ -731,6 +820,7 @@ export const comments = [
     comment: "Freed up so much desk space, very sturdy.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-14",
   },
   {
     id: 91,
@@ -739,6 +829,7 @@ export const comments = [
     comment: "Instructions were terrible, assembly took hours.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-02-09",
   },
   {
     id: 92,
@@ -747,6 +838,7 @@ export const comments = [
     comment: "Holds two 27-inch monitors perfectly.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-03-07",
   },
   {
     id: 93,
@@ -755,6 +847,7 @@ export const comments = [
     comment: "Some screws were missing from the box.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-04-04",
   },
   {
     id: 94,
@@ -763,6 +856,7 @@ export const comments = [
     comment: "Gas springs are smooth, easy height adjustment.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-07",
   },
   {
     id: 95,
@@ -771,6 +865,7 @@ export const comments = [
     comment: "Cable management is poorly designed.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-30",
   },
   {
     id: 96,
@@ -779,9 +874,10 @@ export const comments = [
     comment: "Good value but clamps are weak.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-06-18",
   },
 
-  // Product 8: Webcam HD (11 comments, avg rating 3.9)
+  // Product 8: Webcam HD (11 reviews, avg rating 3.9)
   {
     id: 97,
     productId: 8,
@@ -789,6 +885,7 @@ export const comments = [
     comment: "Plug and play, great 1080p quality.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-01-09",
   },
   {
     id: 98,
@@ -797,6 +894,7 @@ export const comments = [
     comment: "Auto-focus is slow and hunts constantly.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-01-23",
   },
   {
     id: 99,
@@ -805,6 +903,7 @@ export const comments = [
     comment: "Microphone is terrible, use external.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-02-11",
   },
   {
     id: 100,
@@ -813,6 +912,7 @@ export const comments = [
     comment: "Works well in low light, surprisingly good.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-02-27",
   },
   {
     id: 101,
@@ -821,6 +921,7 @@ export const comments = [
     comment: "Plastic mount broke after 3 uses.",
     rating: 2.0,
     starRating: "★★☆☆☆",
+    reviewedDate: "2024-03-15",
   },
   {
     id: 102,
@@ -829,6 +930,7 @@ export const comments = [
     comment: "Good for Zoom calls, overpriced though.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-04-01",
   },
   {
     id: 103,
@@ -837,6 +939,7 @@ export const comments = [
     comment: "Software is unnecessary bloatware.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-04-19",
   },
   {
     id: 104,
@@ -845,6 +948,7 @@ export const comments = [
     comment: "Best budget webcam I've tried.",
     rating: 5.0,
     starRating: "★★★★★",
+    reviewedDate: "2024-05-08",
   },
   {
     id: 105,
@@ -853,6 +957,7 @@ export const comments = [
     comment: "FOV is too narrow for group calls.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-05-26",
   },
   {
     id: 106,
@@ -861,6 +966,7 @@ export const comments = [
     comment: "Colors are washed out compared to Logitech.",
     rating: 3.0,
     starRating: "★★★☆☆",
+    reviewedDate: "2024-06-12",
   },
   {
     id: 107,
@@ -869,17 +975,32 @@ export const comments = [
     comment: "Decent for the price, gets the job done.",
     rating: 4.0,
     starRating: "★★★★☆",
+    reviewedDate: "2024-06-24",
   },
 ];
 
-export function getComments() {
-  return comments;
+export function getReviews() {
+  return reviews;
 }
 
-export function getCommentsByProductId(productId) {
-  return comments.filter((c) => c.productId === Number(productId));
+export function getReviewsByProductId(productId) {
+  return reviews.filter((r) => r.productId === Number(productId));
 }
 
-export function getCommentsByUserId(userId) {
-  return comments.filter((c) => c.userId === Number(userId));
+export function getReviewsByUserId(userId) {
+  return reviews.filter((r) => r.userId === Number(userId));
+}
+
+export function getProductReviewsWithRating(productId, rating) {
+  return reviews.filter(
+    (r) => r.productId === Number(productId) && r.rating === rating,
+  );
+}
+
+
+export function getProductCountWithRating(productId, rating){
+    return reviews.filter(
+      (review) => review.productId === productId && review.rating === rating,
+    ).length;
+
 }
