@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const { user, logout } = useAuth();
@@ -7,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          ShopHub
+          <img src={logo} alt="logo" />
         </Link>
         <div className="navbar-links">
           <Link to="/" className="navbar-link">
@@ -33,7 +34,7 @@ function Navbar() {
               <button onClick={logout} className="btn btn-secondary">
                 Logout
               </button>
-            )}  
+            )}
           </div>
         </div>
       </div>
