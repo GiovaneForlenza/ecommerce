@@ -52,7 +52,7 @@ function ProductDetails() {
             <span className="product-detail-rating">
               {product?.rating}
               <span className="product-star-rating">{product?.starRating}</span>
-              ({product?.comments})
+              ({product?.reviews})
             </span>
             <p className="product-detail-price">
               {/* Product price. Uses ? to only display if product exists */}

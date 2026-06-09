@@ -28,7 +28,7 @@ export const products = [
     name: "Laptop Stand",
     price: 49.99,
     image:
-      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/flagged/photo-1576697010739-6373b63f3204?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Ergonomic aluminum laptop stand that improves posture and workspace organization. Adjustable height and angle.",
     reviews: 9,
@@ -40,7 +40,7 @@ export const products = [
     name: "Mechanical Keyboard",
     price: 129.99,
     image:
-      "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1632079003110-d694908500da?q=80&w=1229&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "RGB backlit mechanical keyboard with Cherry MX switches. Perfect for gaming and typing enthusiasts.",
     reviews: 20,
@@ -52,7 +52,7 @@ export const products = [
     name: "USB-C Hub",
     price: 39.99,
     image:
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=500&h=500&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1764113096548-11270b5febed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Multi-port USB-C hub with HDMI, USB 3.0, and SD card reader. Expand your laptop connectivity.",
     reviews: 12,
@@ -76,7 +76,7 @@ export const products = [
     name: "Monitor Stand",
     price: 79.99,
     image:
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1680254811982-bdf4dabde3ae?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Dual monitor stand with adjustable height and tilt. Frees up desk space and improves ergonomics.",
     reviews: 7,
@@ -88,7 +88,7 @@ export const products = [
     name: "Webcam HD",
     price: 89.99,
     image:
-      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1623949556303-b0d17d198863?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "1080p HD webcam with auto-focus and built-in microphone. Ideal for video calls and streaming.",
     reviews: 11,
